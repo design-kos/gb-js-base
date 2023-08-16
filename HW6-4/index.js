@@ -12,10 +12,10 @@ const getData = async (url) => {
   return data;
 };
 
-function removeElement(id, key) {
-    const element = document.getElementById(`${id}`);
-    element.parentNode.removeChild(element);
-    localStorage.removeItem(`${key} ${id}`);
+function removeElement(key, id) {
+  const element = document.getElementById(`${id}`);
+  element.parentNode.removeChild(element);
+  localStorage.removeItem(`${key} ${id}`);
 }
 
 try {
@@ -55,4 +55,4 @@ try {
   console.error(error);
 }
 
-removeElement(6, "person");
+removeElement("person", 6);
